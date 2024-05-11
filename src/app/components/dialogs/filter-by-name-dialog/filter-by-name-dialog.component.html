@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>Input Name</h2>
+<mat-dialog-content>
+  <form (ngSubmit)="close(data.name)">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput [(ngModel)]="data.name" cdkFocusInitial [ngModelOptions]="{standalone: true}">
+  </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button type="button" (click)="close()">Cancel</button>
+  <button mat-button type="submit" [mat-dialog-close]="data.name">Filter</button>
+</mat-dialog-actions>
