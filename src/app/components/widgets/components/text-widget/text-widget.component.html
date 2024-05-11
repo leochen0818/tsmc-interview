@@ -1,0 +1,9 @@
+@if (!content) {
+  <p>Please pass the correct config data</p>
+} @else {
+  <h3>{{ title }}</h3>
+  <p
+    [style.color]="color"
+    [style.background-color]="backgroundColor"
+  >{{ content }}</p>
+}

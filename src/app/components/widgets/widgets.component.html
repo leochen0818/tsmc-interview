@@ -1,0 +1,11 @@
+@for (config of configs; track config.id) {
+  @if (config.type === 'grid') {
+    <app-grid-widget [gridPosition]="config.position" [config]="config"></app-grid-widget>
+  } @else if (config.type === 'text') {
+    <app-text-widget [gridPosition]="config.position" [config]="config"></app-text-widget>
+  } @else {
+    <p>Wrong widget type</p>
+  }
+} @empty {
+  <p>No widgets to display</p>
+}
