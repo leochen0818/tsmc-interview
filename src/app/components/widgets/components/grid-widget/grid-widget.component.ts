@@ -48,7 +48,14 @@ export class GridWidgetComponent implements OnInit {
   ngOnInit(): void {
     this._widgetService.filterByNameChanged.subscribe((value) => {
       if ( this.displayedColumns.includes('name') ) {
-        this.data = this.originalData.filter((row) => !value ? true : row['name'].includes(value));
+        this.data = this.originalData.filter((row) => {
+          if ( !value ) {
+            return true;
+          }
+
+          const rowValue = row['name'];
+          return rowValue.toString().toLowerCase().includes(value.toLowerCase());
+        });
       }
     });
   }

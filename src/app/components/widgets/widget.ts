@@ -1,5 +1,3 @@
-export type WidgetType = 'grid' | 'text';
-
 export type WidgetPosition = {
   left: number;
   top: number;
@@ -13,7 +11,7 @@ export type GridWidgetOptionHeader = {
 };
 
 export type GridWidgetOptionData = {
-  [key: string]: string;
+  [key: string]: string | number;
 };
 
 export type GridWidgetOptions = {
@@ -30,7 +28,7 @@ export type TextWidgetOption = {
 export type WidgetConfig = {
   id: string;
   title: string;
-  type: WidgetType;
+  type: string;
   position: WidgetPosition;
-  options: GridWidgetOptions | TextWidgetOption;
+  options: any;
 }

@@ -4,7 +4,7 @@
   } @else if (config.type === 'text') {
     <app-text-widget [gridPosition]="config.position" [config]="config"></app-text-widget>
   } @else {
-    <p>Wrong widget type</p>
+    <app-custom-widget [gridPosition]="config.position" [config]="config"></app-custom-widget>
   }
 } @empty {
   <p>No widgets to display</p>

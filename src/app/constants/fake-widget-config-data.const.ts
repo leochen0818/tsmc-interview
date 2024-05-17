@@ -3,46 +3,13 @@ import { WidgetConfig } from '../components/widgets';
 export const FAKE_WIDGET_CONFIG_DATA: { widgets: WidgetConfig[] } = {
   widgets: [
     {
-      id: 'widget-01',
-      title: 'Grid 1',
-      type: 'grid',
+      id: 'custom-widget-01',
+      title: 'Super Grid 1',
+      type: 'super-grid',
       position: {
         left: 0,
         top: 0,
-        width: 12,
-        height: 4
-      },
-      options: {
-        headers: [
-          {
-            fieldId: 'name',
-            displayText: 'User Name'
-          },
-          {
-            fieldId: 'role',
-            displayText: 'User Role'
-          }
-        ],
-        data: [
-          {
-            name: 'Mike',
-            role: 'Engineer'
-          },
-          {
-            name: 'Jeff',
-            role: 'Engineer'
-          }
-        ]
-      }
-    },
-    {
-      id: 'widget-02',
-      title: 'Grid 2',
-      type: 'grid',
-      position: {
-        left: 0,
-        top: 5,
-        width: 5,
+        width: 3,
         height: 3
       },
       options: {
@@ -59,46 +26,14 @@ export const FAKE_WIDGET_CONFIG_DATA: { widgets: WidgetConfig[] } = {
         data: [
           {
             name: 'Mike',
-            age: '38'
+            age: 38
           },
           {
             name: 'Hao',
-            age: '18'
-          }
-        ]
-      }
-    },
-    {
-      id: 'widget-03',
-      title: 'Grid 3',
-      type: 'grid',
-      position: {
-        left: 7,
-        top: 5,
-        width: 5,
-        height: 3
-      },
-      options: {
-        headers: [
-          {
-            fieldId: 'step',
-            displayText: 'Step'
-          },
-          {
-            fieldId: 'result',
-            displayText: 'Result'
+            age: 18
           }
         ],
-        data: [
-          {
-            step: 'Create',
-            result: 'Pass'
-          },
-          {
-            step: 'Validate',
-            result: 'Fail'
-          }
-        ]
+        sortableColumns: [ 'age' ]
       }
     }
   ]
